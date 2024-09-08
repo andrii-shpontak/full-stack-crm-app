@@ -1,0 +1,7 @@
+@mixin click-animation() {
+  &:active:not(:disabled) {
+    box-shadow: 0 0.125rem 0.5rem $buttonBg;
+    transform: translateY(0.125rem);
+    opacity: 0.75;
+  }
+}

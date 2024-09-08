@@ -1,0 +1,24 @@
+@mixin app-button() {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 3rem);
+  background: $buttonLinearBg;
+  color: $white;
+  border-radius: 2rem;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  padding: 1rem 0;
+  margin: 1rem 1.5rem;
+  &:active:not(:disabled) {
+    box-shadow: 0 0.125rem 0.5rem $buttonBg;
+    transform: translateY(0.125rem);
+    opacity: 0.75;
+  }
+  &:disabled {
+    background: $disabled;
+  }
+}
