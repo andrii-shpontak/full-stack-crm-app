@@ -1,10 +1,9 @@
-# compiled output
-/api/dist
-/web/build
-
 # Node modules
-/api/node_modules
-/web/node_modules
+node_modules
+
+# Compiled output
+/dist
+/build
 
 # Logs
 logs
@@ -17,10 +16,6 @@ lerna-debug.log*
 
 # OS
 .DS_Store
-
-# Tests
-/coverage
-/.nyc_output
 
 # IDEs and editors
 /.idea
@@ -45,7 +40,7 @@ lerna-debug.log*
 .env.production.local
 .env.local
 
-# temp directory
+# Temp directories
 .temp
 .tmp
 
