@@ -1,7 +1,8 @@
+import { AuthModule } from './auth/auth.module';
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { User } from './user/models/user.model';
-import { UserModule } from './user/user.module';
+import { User } from './user.model';
+import { UserModule } from './user.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { UserModule } from './user/user.module';
     }),
     SequelizeModule.forFeature([User]),
     UserModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
