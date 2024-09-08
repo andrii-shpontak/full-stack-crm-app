@@ -1,5 +1,5 @@
 export enum AbsoluteRoutes {
-  login = '/login',
+  login = '/',
   signup = '/signup',
   user = '/user',
   users = '/users',
