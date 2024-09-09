@@ -1,0 +1,48 @@
+@import '../../assets/Theme';
+
+.notification {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  z-index: 0;
+  height: 0;
+  padding: 1rem;
+  .notificationItem {
+    position: relative;
+    padding: 0.5rem 1rem 1rem;
+    border-radius: 0.25rem;
+    color: $white;
+    font-size: 1rem;
+    z-index: 9999;
+    .close {
+      position: absolute;
+      right: 0.5rem;
+      top: 0;
+      font-size: 1.75rem;
+      cursor: pointer;
+    }
+    span {
+      display: block;
+    }
+    .title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    &.warning {
+      background-color: $notification_warning;
+      color: $text_dark;
+    }
+    &.success {
+      background-color: $notification_success;
+      color: $white;
+    }
+    &.error {
+      background-color: $notification_error;
+      color: $white;
+    }
+  }
+}
