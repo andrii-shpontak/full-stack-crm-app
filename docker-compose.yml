@@ -24,3 +24,14 @@ services:
       MYSQL_PASSWORD: dev
     ports:
       - "3306:3306"
+
+  frontend:
+    container_name: web
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    image: web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api

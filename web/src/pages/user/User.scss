@@ -1,0 +1,27 @@
+@import '../../assets/Theme/';
+
+.userPage {
+  position: relative;
+  padding: 2rem 0;
+  .userData {
+    p {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem;
+      text-decoration: underline;
+    }
+  }
+
+  .logoutBtn {
+    @include app-button;
+    & {
+      position: absolute;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      width: unset;
+      margin: 0;
+      top: 0;
+      right: 0;
+    }
+  }
+}

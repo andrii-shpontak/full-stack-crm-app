@@ -3,10 +3,10 @@ export const URLS = {
   API_AUTH: 'http://localhost:3003/auth/',
 
   // auth paths
-  LOGIN: 'login',
-  REFRESH: 'refresh',
+  LOGIN: 'login/',
+  REFRESH: 'refresh/',
 
   // protected paths
-  ADD_USER: 'add-user',
-  GET_USER: 'get-user',
+  ADD_USER: 'add-user/',
+  GET_USER: 'get-user/',
 };

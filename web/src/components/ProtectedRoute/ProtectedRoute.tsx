@@ -7,6 +7,7 @@ const ProtectedRoute = ({ element }: TRouteGuard) => {
   const token = LocalStorageService.getItem(LocalStorageKeys.Access);
 
   if (!token) {
+    LocalStorageService.clear();
     return <Navigate to={AbsoluteRoutes.login} />;
   }
 

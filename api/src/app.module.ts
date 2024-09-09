@@ -10,8 +10,8 @@ import { UserModule } from './user/user.module';
   imports: [
     SequelizeModule.forRoot({
       dialect: 'mysql',
-      host: 'localhost',
-      // host: 'db', - for docker
+      // host: 'localhost', //for local work
+      host: 'db', //for docker
       port: 3306,
       username: 'dev',
       password: 'dev',
