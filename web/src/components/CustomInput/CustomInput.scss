@@ -1,0 +1,55 @@
+@import '../../assets/Theme/';
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .form-control {
+    padding: 0.5rem;
+  }
+  label {
+    margin-bottom: 0.5rem;
+  }
+  input {
+    border: 0.063rem solid $disabled;
+    border-radius: 0.25rem;
+    &:not(:placeholder-shown) {
+      padding-right: 5rem;
+      ~ .iconBox {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &:placeholder-shown {
+      ~ .iconBox {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+  .iconBox {
+    position: absolute;
+    right: 0.5rem;
+    top: 2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      visibility 0.3s,
+      opacity 0.3s;
+    img {
+      @include click-animation;
+      & {
+        height: 1.25rem;
+        cursor: pointer;
+        border-radius: 100%;
+        margin: 0 0.25rem;
+      }
+    }
+  }
+
+  .error-message {
+    color: $errorText;
+    font-size: 0.875rem;
+  }
+}

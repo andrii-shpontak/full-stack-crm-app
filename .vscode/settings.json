@@ -10,7 +10,8 @@
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
   "cSpell.words": [
-    "craco"
+    "craco",
+    "Formik"
   ],
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

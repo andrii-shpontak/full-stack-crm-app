@@ -15,7 +15,7 @@ const AppRouter = () => {
         <Routes>
           <Route path={AbsoluteRoutes.login} element={<LoginPage />} />
           <Route path={AbsoluteRoutes.user} element={<ProtectedRoute element={<UserPage />} />} />
-          <Route path={AbsoluteRoutes.signUp} element={<ProtectedRoute element={<SignUpPage />} />} />
+          <Route path={AbsoluteRoutes.signUp} element={<SignUpPage />} />
           <Route path='*' element={<Navigate to={AbsoluteRoutes.login} />} />
         </Routes>
       </Suspense>
