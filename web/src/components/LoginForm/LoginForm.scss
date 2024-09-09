@@ -1,0 +1,19 @@
+@import '../../assets/Theme';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  background-color: $white;
+  border-radius: 0.25rem;
+
+  button {
+    @include app-button;
+  }
+}
+
+.formHeader {
+  padding: 0.5rem;
+}

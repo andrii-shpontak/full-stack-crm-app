@@ -11,3 +11,8 @@ export const signUpValidationSchema = yup.object().shape({
     .required('Confirm password is required!')
     .oneOf([yup.ref('password')], 'Confirm should be the same as password'),
 });
+
+export const loginValidationSchema = yup.object().shape({
+  username: yup.string().required('Account name is required!'),
+  password: yup.string().min(4, 'Minimum 4 characters!').required('Password is required!'),
+});

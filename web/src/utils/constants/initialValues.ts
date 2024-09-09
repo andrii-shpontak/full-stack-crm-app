@@ -7,3 +7,8 @@ export const signUpFormInitialValues: TSignUpFormValues = {
   password: '',
   re_password: '',
 };
+
+export const loginFormInitialValues = {
+  username: '',
+  password: '',
+};

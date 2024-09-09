@@ -1,8 +1,9 @@
 import type { MouseEvent } from 'react';
+import { URLS } from '../constants';
 
 export type TUser = {
   name: string;
-  email: string;
+  email?: string;
   phone: string;
 };
 
@@ -27,4 +28,17 @@ export type TCustomInputProps = {
   placeholder: string;
   type: string;
   onClear: (e: MouseEvent<HTMLImageElement>) => void;
+};
+
+export type UrlsType = keyof typeof URLS;
+
+export type TLoginFormValues = {
+  username: string;
+  password: string;
+};
+
+export type TLoginResponse = {
+  access_token: string;
+  refresh_token: string;
+  user_id: string;
 };

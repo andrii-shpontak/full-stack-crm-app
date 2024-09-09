@@ -3,14 +3,15 @@ import { AuthModule } from './auth/auth.module';
 import { HttpExceptionFilter } from './filters/http-exception.filter';
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { User } from './user.model';
-import { UserModule } from './user.module';
+import { User } from './user/user.model';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
     SequelizeModule.forRoot({
       dialect: 'mysql',
-      host: 'db',
+      host: 'localhost',
+      // host: 'db', - for docker
       port: 3306,
       username: 'dev',
       password: 'dev',
